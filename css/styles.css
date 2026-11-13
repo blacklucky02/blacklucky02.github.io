@@ -360,7 +360,7 @@ button, input { font: inherit; color: inherit; }
 .hero {
   position: relative;
   padding: clamp(4rem, 12vw, 8rem) 0 clamp(5rem, 14vw, 9.5rem);
-  overflow: hidden;
+  overflow: visible;
 }
 .hero-bg-num {
   position: absolute;
@@ -456,26 +456,6 @@ button, input { font: inherit; color: inherit; }
   color: var(--ink-soft);
 }
 .prose p:last-child { margin-bottom: 0; }
-.about-points {
-  list-style: none;
-  margin: 2rem 0 0;
-  padding: 0;
-  border-top: 1px solid var(--line);
-}
-.about-points li {
-  display: grid;
-  grid-template-columns: 4.5rem 1fr;
-  gap: 1rem;
-  padding: 1.1rem 0;
-  border-bottom: 1px solid var(--line);
-  align-items: baseline;
-}
-.about-points .num {
-  font-family: var(--font-serif);
-  font-weight: 600;
-  letter-spacing: 0.04em;
-}
-
 /* ---------- Contents ---------- */
 .stat-grid {
   display: grid;
@@ -1076,4 +1056,381 @@ body.nav-lock { overflow: hidden; }
   margin: 0 0 0.5rem;
   font-size: 0.85rem;
   color: var(--ink-soft);
+}
+
+/* ---------- Geometric ornaments ---------- */
+.geo-layer {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+.section,
+.legal-hero,
+.site-footer {
+  position: relative;
+}
+.section > .wrap,
+.legal-hero > .wrap,
+.site-footer > .wrap {
+  position: relative;
+  z-index: 1;
+}
+
+.geo-grid {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(10, 10, 10, 0.16) 1px, transparent 1.2px);
+  background-size: 32px 32px;
+  -webkit-mask-image: linear-gradient(to left, #000 18%, transparent 72%);
+  mask-image: linear-gradient(to left, #000 18%, transparent 72%);
+  opacity: 0.55;
+}
+
+.geo-ring,
+.geo-arc,
+.geo-half {
+  position: absolute;
+  box-sizing: border-box;
+  border: 1px solid rgba(10, 10, 10, 0.12);
+  border-radius: 50%;
+  pointer-events: none;
+}
+.geo-ring-lg {
+  width: min(42vw, 34rem);
+  height: min(42vw, 34rem);
+  right: -8rem;
+  top: -3.5rem;
+  border-color: rgba(10, 10, 10, 0.14);
+}
+.geo-ring-md {
+  width: min(26vw, 21rem);
+  height: min(26vw, 21rem);
+  right: 1.5rem;
+  top: 4.5rem;
+  border-color: rgba(10, 10, 10, 0.1);
+  animation: geo-orbit 96s linear infinite;
+}
+.geo-arc {
+  width: 11rem;
+  height: 11rem;
+  left: 4%;
+  top: 12%;
+  border-color: transparent;
+  border-top-color: rgba(10, 10, 10, 0.16);
+  border-right-color: rgba(10, 10, 10, 0.16);
+  animation: geo-orbit 120s linear infinite;
+}
+.geo-half {
+  width: 14rem;
+  height: 14rem;
+  left: -7rem;
+  bottom: 6%;
+  border-color: rgba(10, 10, 10, 0.12);
+}
+.geo-ring-about {
+  width: min(28vw, 22rem);
+  height: min(28vw, 22rem);
+  left: -8rem;
+  top: 18%;
+  border-color: rgba(10, 10, 10, 0.11);
+}
+.geo-half-about {
+  width: 9rem;
+  height: 9rem;
+  right: -4.5rem;
+  bottom: 12%;
+  border-color: rgba(10, 10, 10, 0.12);
+}
+.geo-ring-plans {
+  width: 18rem;
+  height: 18rem;
+  right: -6rem;
+  top: -5rem;
+  border-color: rgba(10, 10, 10, 0.1);
+}
+.geo-ring-fees {
+  width: 12rem;
+  height: 12rem;
+  left: -5rem;
+  top: 28%;
+  border-color: rgba(10, 10, 10, 0.1);
+}
+.geo-ring-faq {
+  width: 16rem;
+  height: 16rem;
+  right: -5.5rem;
+  bottom: -5rem;
+  border-color: rgba(10, 10, 10, 0.1);
+}
+
+.geo-plus {
+  position: absolute;
+  width: 11px;
+  height: 11px;
+  pointer-events: none;
+}
+.geo-plus::before,
+.geo-plus::after {
+  content: "";
+  position: absolute;
+  background: rgba(10, 10, 10, 0.28);
+}
+.geo-plus::before {
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 1px;
+  transform: translateY(-50%);
+}
+.geo-plus::after {
+  top: 0;
+  left: 50%;
+  width: 1px;
+  height: 100%;
+  transform: translateX(-50%);
+}
+.geo-plus-a { top: 18%; right: 22%; }
+.geo-plus-b {
+  top: 38%;
+  right: 8%;
+  animation: geo-drift 14s ease-in-out infinite;
+}
+.geo-plus-c { bottom: 22%; left: 6%; }
+.geo-plus-d { top: 1.75rem; right: 2.25rem; }
+.geo-plus-e { top: 2.75rem; right: 8%; }
+.geo-plus-f { bottom: 18%; left: 7%; }
+.geo-plus-g { top: 30%; left: 5%; }
+
+.geo-sq {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border: 1px solid rgba(10, 10, 10, 0.28);
+  pointer-events: none;
+}
+.geo-sq-a {
+  top: 22%;
+  left: 9%;
+}
+.geo-sq-b {
+  bottom: 24%;
+  left: 12%;
+  transform: rotate(45deg);
+}
+.geo-sq-c {
+  top: 5.5rem;
+  right: 12%;
+}
+
+.geo-diag {
+  position: absolute;
+  left: -10%;
+  top: 8%;
+  width: 55%;
+  height: 1px;
+  background: rgba(10, 10, 10, 0.08);
+  transform: rotate(-18deg);
+  transform-origin: left center;
+  pointer-events: none;
+}
+
+@keyframes geo-orbit {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+@keyframes geo-drift {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(5px, -8px); }
+}
+
+/* Eyebrow: small outlined square marker */
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+.eyebrow::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border: 1px solid currentColor;
+  flex-shrink: 0;
+}
+
+/* Short rule begins with a diamond */
+.rule {
+  position: relative;
+}
+.rule::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 6px;
+  height: 6px;
+  border: 1px solid var(--ink);
+  background: var(--bg);
+  transform: translate(-3px, -50%) rotate(45deg);
+  pointer-events: none;
+}
+.section-soft .rule::before { background: var(--bg-soft); }
+.section-ink .rule::before {
+  background: var(--bg-ink);
+  border-color: rgba(255, 255, 255, 0.45);
+}
+
+/* Junction plus between sections */
+.section::after,
+.hero::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 15px;
+  height: 15px;
+  transform: translate(-50%, 50%);
+  background:
+    linear-gradient(#c8c8c8, #c8c8c8) center / 15px 1px no-repeat,
+    linear-gradient(#c8c8c8, #c8c8c8) center / 1px 15px no-repeat;
+  pointer-events: none;
+  z-index: 2;
+}
+#contact.section::after {
+  background:
+    linear-gradient(#9a9a9a, #9a9a9a) center / 15px 1px no-repeat,
+    linear-gradient(#9a9a9a, #9a9a9a) center / 1px 15px no-repeat;
+}
+
+/* Corner ticks on bordered cards */
+.plan,
+.fee-table-wrap,
+.contact-card,
+.sell-item,
+.note-format {
+  position: relative;
+}
+.plan::before,
+.plan::after,
+.fee-table-wrap::before,
+.fee-table-wrap::after,
+.contact-card::before,
+.contact-card::after,
+.sell-item::before,
+.sell-item::after,
+.note-format::before,
+.note-format::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  pointer-events: none;
+  z-index: 1;
+}
+.plan::before,
+.fee-table-wrap::before,
+.contact-card::before,
+.sell-item::before,
+.note-format::before {
+  top: 6px;
+  left: 6px;
+  border-top: 1px solid rgba(10, 10, 10, 0.32);
+  border-left: 1px solid rgba(10, 10, 10, 0.32);
+}
+.plan::after,
+.fee-table-wrap::after,
+.contact-card::after,
+.sell-item::after,
+.note-format::after {
+  right: 6px;
+  bottom: 6px;
+  border-right: 1px solid rgba(10, 10, 10, 0.32);
+  border-bottom: 1px solid rgba(10, 10, 10, 0.32);
+}
+.plan-featured::before,
+.plan-featured::after,
+.section-ink .contact-card::before,
+.section-ink .contact-card::after {
+  border-color: rgba(255, 255, 255, 0.42);
+}
+
+/* Faint ring on the dark contact block */
+#contact::before {
+  content: "";
+  position: absolute;
+  width: min(40vw, 22rem);
+  height: min(40vw, 22rem);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 50%;
+  right: -7rem;
+  top: -8rem;
+  pointer-events: none;
+}
+
+.legal-hero {
+  overflow: hidden;
+}
+.legal-hero::before {
+  content: "";
+  position: absolute;
+  width: 16rem;
+  height: 16rem;
+  border: 1px solid rgba(10, 10, 10, 0.1);
+  border-radius: 50%;
+  right: -5rem;
+  top: -7rem;
+  pointer-events: none;
+}
+
+@media (max-width: 719px) {
+  .geo-hero .geo-diag,
+  .geo-hero .geo-plus-b,
+  .geo-hero .geo-plus-c,
+  .geo-hero .geo-arc,
+  .geo-hero .geo-ring-md,
+  .geo-hero .geo-sq-a,
+  .geo-about .geo-plus-d,
+  .geo-about .geo-sq-b,
+  .geo-about .geo-half-about,
+  .geo-plans .geo-plus-e,
+  .geo-fees .geo-plus-f,
+  .geo-faq .geo-plus-g,
+  .geo-faq .geo-sq-c {
+    display: none;
+  }
+  .geo-hero .geo-ring-lg {
+    width: 18rem;
+    height: 18rem;
+    right: -6.5rem;
+    top: -2.25rem;
+  }
+  .geo-hero .geo-half {
+    width: 9rem;
+    height: 9rem;
+    left: -5rem;
+  }
+  .geo-grid {
+    opacity: 0.35;
+    background-size: 28px 28px;
+  }
+  .geo-ring-about {
+    width: 14rem;
+    height: 14rem;
+    left: -7rem;
+  }
+  .geo-ring-plans,
+  .geo-ring-fees,
+  .geo-ring-faq {
+    width: 11rem;
+    height: 11rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .geo-ring-md,
+  .geo-arc,
+  .geo-plus-b {
+    animation: none;
+  }
 }
