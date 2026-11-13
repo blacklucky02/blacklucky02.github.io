@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Canonical site: https://blacklucky02.github.io -->
+<!-- Canonical site: https://shiftnotes.github.io -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://blacklucky02.github.io/</loc>
+    <loc>https://shiftnotes.github.io/</loc>
     <lastmod>2026-11-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://blacklucky02.github.io/privacy.html</loc>
+    <loc>https://shiftnotes.github.io/privacy.html</loc>
     <lastmod>2026-11-14</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
-    <loc>https://blacklucky02.github.io/refund.html</loc>
+    <loc>https://shiftnotes.github.io/refund.html</loc>
     <lastmod>2026-11-14</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://blacklucky02.github.io/terms.html</loc>
+    <loc>https://shiftnotes.github.io/terms.html</loc>
     <lastmod>2026-11-14</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>

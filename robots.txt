@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://blacklucky02.github.io/sitemap.xml
+Sitemap: https://shiftnotes.github.io/sitemap.xml
