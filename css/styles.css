@@ -1603,3 +1603,8 @@ html, body { overflow-x: hidden; max-width: 100%; }
   .geo-ring-plans { width: 5rem; height: 3.5rem; right: 1rem; top: 1rem; }
   .geo-half { width: 4.5rem !important; height: 4.5rem !important; }
 }
+
+/* remove remaining thin rings and arcs in hero */
+.geo-hero .geo-ring,
+.geo-hero .geo-arc,
+.geo-hero .geo-sq-a { display: none !important; }
