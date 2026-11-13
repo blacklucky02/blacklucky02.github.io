@@ -1579,3 +1579,27 @@ body.nav-lock { overflow: hidden; }
 /* prevent sideways scroll from decorative shapes */
 html, body { overflow-x: hidden; max-width: 100%; }
 @supports (overflow: clip) { html, body { overflow-x: clip; } }
+
+/* replace thin edge arcs with dot-grid patches (thin arcs looked like stray hairs on phones) */
+.geo-half,
+.geo-ring-about,
+.geo-ring-plans,
+.geo-ring-fees,
+.geo-ring-faq {
+  border: 0 !important;
+  border-radius: 0 !important;
+  background-image: radial-gradient(rgba(10, 10, 10, 0.22) 1.2px, transparent 1.6px);
+  background-size: 16px 16px;
+  opacity: 0.7;
+}
+.geo-ring-faq { width: 8rem; height: 8rem; right: 1.5rem; bottom: 2rem; }
+.geo-ring-fees { width: 7rem; height: 7rem; left: 1rem; top: 26%; }
+.geo-ring-plans { width: 9rem; height: 6rem; right: 1.5rem; top: 1.5rem; }
+.geo-ring-about { width: 8rem; height: 8rem; left: 1rem; top: 16%; }
+.geo-half { width: 7rem !important; height: 7rem !important; left: 1rem !important; bottom: 6%; }
+@media (max-width: 719px) {
+  .geo-ring-faq { width: 5rem; height: 5rem; right: 1rem; bottom: 1.25rem; }
+  .geo-ring-fees, .geo-ring-about { width: 4.5rem; height: 4.5rem; }
+  .geo-ring-plans { width: 5rem; height: 3.5rem; right: 1rem; top: 1rem; }
+  .geo-half { width: 4.5rem !important; height: 4.5rem !important; }
+}
