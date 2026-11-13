@@ -1,4 +1,4 @@
-/* Shift Notes — NCLEX-RN 筆記銷售頁
+/* ShiftNotes — NCLEX-RN 筆記銷售頁
    黑白、留白、字體主導的簡約編排 */
 
 :root {
@@ -364,17 +364,25 @@ button, input { font: inherit; color: inherit; }
 }
 .hero-bg-num {
   position: absolute;
-  right: -0.1em;
-  top: 8%;
+  right: -0.04em;
+  top: 10%;
   font-family: var(--font-serif);
   font-weight: 600;
-  font-size: clamp(8rem, 28vw, 22rem);
-  line-height: 0.75;
+  font-size: clamp(7.2rem, 24vw, 20rem);
+  line-height: 0.8;
   color: #f0f0f0;
-  letter-spacing: -0.06em;
+  letter-spacing: -0.05em;
   pointer-events: none;
   user-select: none;
   z-index: 0;
+}
+@media (max-width: 719px) {
+  .hero-bg-num {
+    right: -0.12em;
+    top: 6%;
+    font-size: clamp(8rem, 44vw, 12rem);
+    letter-spacing: -0.06em;
+  }
 }
 .hero-inner {
   position: relative;
@@ -402,7 +410,7 @@ button, input { font: inherit; color: inherit; }
 }
 .hero-sub {
   margin: 0 0 2.5rem;
-  max-width: 34rem;
+  max-width: 38rem;
   font-size: clamp(1rem, 2vw, 1.15rem);
   color: var(--ink-soft);
   line-height: 1.9;
@@ -1098,10 +1106,10 @@ body.nav-lock { overflow: hidden; }
   pointer-events: none;
 }
 .geo-ring-lg {
-  width: min(42vw, 34rem);
-  height: min(42vw, 34rem);
-  right: -8rem;
-  top: -3.5rem;
+  width: min(44vw, 36rem);
+  height: min(44vw, 36rem);
+  right: -7.25rem;
+  top: -3.25rem;
   border-color: rgba(10, 10, 10, 0.14);
 }
 .geo-ring-md {
@@ -1400,10 +1408,10 @@ body.nav-lock { overflow: hidden; }
     display: none;
   }
   .geo-hero .geo-ring-lg {
-    width: 18rem;
-    height: 18rem;
-    right: -6.5rem;
-    top: -2.25rem;
+    width: 20rem;
+    height: 20rem;
+    right: -5.25rem;
+    top: -1.6rem;
   }
   .geo-hero .geo-half {
     width: 9rem;
@@ -1433,4 +1441,137 @@ body.nav-lock { overflow: hidden; }
   .geo-plus-b {
     animation: none;
   }
+}
+
+/* ---------- Story, features, guarantee ---------- */
+.hero-proof {
+  margin: 1.35rem 0 0;
+  font-size: 0.9rem;
+  letter-spacing: 0.06em;
+  color: var(--ink-mute);
+}
+.pull-quote {
+  margin: 2.25rem 0 0;
+  padding: 0 0 0 1.25rem;
+  border-left: 1px solid var(--ink);
+  max-width: 22rem;
+}
+.pull-quote p {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: clamp(1.15rem, 2.2vw, 1.45rem);
+  line-height: 1.55;
+  letter-spacing: 0.02em;
+  color: var(--ink);
+}
+.feature-trio {
+  display: grid;
+  gap: 1.25rem;
+  margin-top: 2.75rem;
+}
+@media (min-width: 860px) {
+  .feature-trio { grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+}
+.trio-item {
+  position: relative;
+  padding: 1.75rem 1.5rem 1.6rem;
+  border: 1px solid var(--line);
+  background: var(--bg);
+}
+.trio-item::before,
+.trio-item::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  pointer-events: none;
+}
+.trio-item::before {
+  top: 6px;
+  left: 6px;
+  border-top: 1px solid rgba(10, 10, 10, 0.32);
+  border-left: 1px solid rgba(10, 10, 10, 0.32);
+}
+.trio-item::after {
+  right: 6px;
+  bottom: 6px;
+  border-right: 1px solid rgba(10, 10, 10, 0.32);
+  border-bottom: 1px solid rgba(10, 10, 10, 0.32);
+}
+.trio-index {
+  display: block;
+  margin-bottom: 1rem;
+  font-family: var(--font-serif);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  font-size: 0.95rem;
+}
+.trio-item h3 {
+  margin: 0 0 0.7rem;
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+.trio-item p {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+}
+.guarantee-inner { max-width: 44rem; }
+.guarantee-kicker {
+  margin: 0 0 0.35rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.62);
+}
+#guarantee .section-title {
+  font-size: clamp(2.2rem, 6vw, 4rem);
+}
+.guarantee-lead {
+  margin: 0 0 1.1rem;
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+  color: rgba(255, 255, 255, 0.7);
+}
+.guarantee-body {
+  margin: 0 0 2rem;
+  max-width: 38rem;
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 1.05rem;
+  line-height: 1.85;
+}
+#guarantee .btn-ghost {
+  border-color: rgba(255, 255, 255, 0.55);
+  color: #fff;
+}
+#guarantee .btn-ghost:hover,
+#guarantee .btn-ghost:focus-visible {
+  background: #fff;
+  color: var(--ink);
+}
+#guarantee::before {
+  content: "";
+  position: absolute;
+  width: min(42vw, 24rem);
+  height: min(42vw, 24rem);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 50%;
+  right: -7rem;
+  top: -8rem;
+  pointer-events: none;
+}
+#contact .btn-ghost {
+  border-color: rgba(255, 255, 255, 0.55);
+  color: #fff;
+}
+#contact .btn-ghost:hover,
+#contact .btn-ghost:focus-visible {
+  background: #fff;
+  color: var(--ink);
+}
+@media (max-width: 959px) {
+  .nav-desktop { gap: 0.85rem; font-size: 0.82rem; }
 }
