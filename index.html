@@ -36,172 +36,254 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css?v=4">
   <script type="application/ld+json">
- {
+{
  "@context": "https://schema.org",
  "@graph": [
- {
- "@type": "Organization",
- "@id": "https://shiftnotes.github.io/#organization",
- "name": "ShiftNotes",
- "alternateName": "轉換筆記工作室",
- "url": "https://shiftnotes.github.io/",
- "email": "blacklucky02@gmail.com",
- "logo": "https://shiftnotes.github.io/assets/og-image.png",
- "sameAs": ["https://lin.ee/58S5jVlG", "https://www.instagram.com/shiftnotes1991/"]
- },
- {
- "@type": "WebSite",
- "@id": "https://shiftnotes.github.io/#website",
- "url": "https://shiftnotes.github.io/",
- "name": "ShiftNotes",
- "inLanguage": "zh-Hant-TW",
- "publisher": { "@id": "https://shiftnotes.github.io/#organization" }
- },
- {
- "@type": "Person",
- "@id": "https://shiftnotes.github.io/#person",
- "name": "耘楓學長",
- "alternateName": "耘楓",
- "jobTitle": "臨床護理師",
- "description": "臨床護理經驗十年，備考美國註冊護理師考試（NCLEX-RN）一次通過，已帶領多位學員通過 RN，已有 200+ 位護理戰友參與計畫 ",
- "worksFor": { "@id": "https://shiftnotes.github.io/#organization" }
- },
- {
- "@type": "Product",
- "@id": "https://shiftnotes.github.io/#product",
- "name": "ShiftNotes NCLEX-RN 備考筆記",
- "description": "美國護理師考試（NCLEX-RN）備考筆記 101 篇（中英對照、七大單元），含 6,000+ 則知識點、101 個核心考點速讀、101 張一對一圖卡，以及 80+ 種藥物整理與檢驗速查 可選擇陪跑方案，包含四次 meeting、刷題指引、刷題弱點分析與藥物教學 ",
- "brand": { "@type": "Brand", "name": "ShiftNotes" },
- "category": "數位教材",
- "inLanguage": "zh-Hant-TW",
- "offers": [
- {
- "@type": "Offer",
- "name": "純筆記方案",
- "description": "包含 101 篇中英對照筆記、101 張一對一圖卡、80+ 種藥物整理、檢驗速查，以及 101 個核心考點速讀 ",
- "price": "4500",
- "priceCurrency": "TWD",
- "availability": "https://schema.org/InStock",
- "url": "https://shiftnotes.github.io/#plans",
- "seller": { "@id": "https://shiftnotes.github.io/#organization" }
- },
- {
- "@type": "Offer",
- "name": "陪跑方案",
- "description": "包含純筆記方案全部數位內容，另加四次 meeting、刷題指引、刷題弱點分析與藥物教學 ",
- "price": "7500",
- "priceCurrency": "TWD",
- "availability": "https://schema.org/InStock",
- "url": "https://shiftnotes.github.io/#plans",
- "seller": { "@id": "https://shiftnotes.github.io/#organization" }
- }
+  {
+   "@type": "Organization",
+   "@id": "https://shiftnotes.github.io/#organization",
+   "name": "ShiftNotes",
+   "alternateName": "轉換筆記工作室",
+   "url": "https://shiftnotes.github.io/",
+   "email": "blacklucky02@gmail.com",
+   "logo": "https://shiftnotes.github.io/assets/og-image.png",
+   "sameAs": [
+    "https://lin.ee/58S5jVlG",
+    "https://www.instagram.com/shiftnotes1991/"
+   ]
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://shiftnotes.github.io/#website",
+   "url": "https://shiftnotes.github.io/",
+   "name": "ShiftNotes",
+   "inLanguage": "zh-Hant-TW",
+   "publisher": {
+    "@id": "https://shiftnotes.github.io/#organization"
+   }
+  },
+  {
+   "@type": "Person",
+   "@id": "https://shiftnotes.github.io/#person",
+   "name": "耘楓學長",
+   "alternateName": "耘楓",
+   "jobTitle": "臨床護理師",
+   "description": "臨床護理經驗十年，備考美國註冊護理師考試（NCLEX-RN）一次通過，已帶領多位學員通過 RN，已有 200+ 位護理戰友參與計畫 ",
+   "worksFor": {
+    "@id": "https://shiftnotes.github.io/#organization"
+   }
+  },
+  {
+   "@type": "Product",
+   "@id": "https://shiftnotes.github.io/#product",
+   "name": "ShiftNotes NCLEX-RN 備考筆記",
+   "description": "美國護理師考試（NCLEX-RN）備考筆記 101 篇（中英對照、七大單元），含 6,000+ 則知識點、101 個核心考點速讀、101 張一對一圖卡，以及 80+ 種藥物整理與檢驗速查 可選擇陪跑方案，包含四次 meeting、刷題指引、刷題弱點分析與藥物教學 ",
+   "brand": {
+    "@type": "Brand",
+    "name": "ShiftNotes"
+   },
+   "inLanguage": "zh-Hant-TW",
+   "offers": [
+    {
+     "@type": "Offer",
+     "name": "純筆記方案",
+     "description": "包含 101 篇中英對照筆記、101 張一對一圖卡、80+ 種藥物整理、檢驗速查，以及 101 個核心考點速讀 ",
+     "price": "4500",
+     "priceCurrency": "TWD",
+     "availability": "https://schema.org/InStock",
+     "url": "https://shiftnotes.github.io/#plans",
+     "seller": {
+      "@id": "https://shiftnotes.github.io/#organization"
+     },
+     "hasMerchantReturnPolicy": {
+      "@type": "MerchantReturnPolicy",
+      "applicableCountry": "TW",
+      "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted",
+      "merchantReturnLink": "https://shiftnotes.github.io/refund.html"
+     },
+     "shippingDetails": {
+      "@type": "OfferShippingDetails",
+      "shippingRate": {
+       "@type": "MonetaryAmount",
+       "value": "0",
+       "currency": "TWD"
+      },
+      "shippingDestination": {
+       "@type": "DefinedRegion",
+       "addressCountry": "TW"
+      },
+      "deliveryTime": {
+       "@type": "ShippingDeliveryTime",
+       "handlingTime": {
+        "@type": "QuantitativeValue",
+        "minValue": 0,
+        "maxValue": 1,
+        "unitCode": "DAY"
+       },
+       "transitTime": {
+        "@type": "QuantitativeValue",
+        "minValue": 0,
+        "maxValue": 0,
+        "unitCode": "DAY"
+       }
+      }
+     }
+    },
+    {
+     "@type": "Offer",
+     "name": "陪跑方案",
+     "description": "包含純筆記方案全部數位內容，另加四次 meeting、刷題指引、刷題弱點分析與藥物教學 ",
+     "price": "7500",
+     "priceCurrency": "TWD",
+     "availability": "https://schema.org/InStock",
+     "url": "https://shiftnotes.github.io/#plans",
+     "seller": {
+      "@id": "https://shiftnotes.github.io/#organization"
+     },
+     "hasMerchantReturnPolicy": {
+      "@type": "MerchantReturnPolicy",
+      "applicableCountry": "TW",
+      "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted",
+      "merchantReturnLink": "https://shiftnotes.github.io/refund.html"
+     },
+     "shippingDetails": {
+      "@type": "OfferShippingDetails",
+      "shippingRate": {
+       "@type": "MonetaryAmount",
+       "value": "0",
+       "currency": "TWD"
+      },
+      "shippingDestination": {
+       "@type": "DefinedRegion",
+       "addressCountry": "TW"
+      },
+      "deliveryTime": {
+       "@type": "ShippingDeliveryTime",
+       "handlingTime": {
+        "@type": "QuantitativeValue",
+        "minValue": 0,
+        "maxValue": 1,
+        "unitCode": "DAY"
+       },
+       "transitTime": {
+        "@type": "QuantitativeValue",
+        "minValue": 0,
+        "maxValue": 0,
+        "unitCode": "DAY"
+       }
+      }
+     }
+    }
+   ],
+   "image": [
+    "https://shiftnotes.github.io/assets/og-image.png"
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://shiftnotes.github.io/#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "英文基礎不好，真的能考過美國 RN 嗎？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "這是最常被問到的問題 NCLEX 考試考的是護理邏輯與臨床安全觀念，並非文學造詣 筆記把複雜的英文拆解為醫護人員熟悉的學術詞彙與關鍵字，只要掌握這些對標詞彙，英文基礎較弱也能著手應考 "
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "這份筆記適合誰？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "適合正在準備美國註冊護理師考試（NCLEX-RN）的考生 無論你正在規劃讀書進度，或已開始刷題、希望把內容整理得更清楚，都可以先透過官方 LINE 諮詢，確認是否符合你目前的程度與需求 "
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "純筆記與陪跑方案有何不同？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "兩種方案都包含 101 篇中英對照筆記、101 張一對一圖卡、80+ 種藥物整理、檢驗速查，以及 101 個核心考點速讀 陪跑方案另外包含讀書計畫安排、四次 meeting、刷題指引、刷題弱點分析與藥物教學，並陪跑到考取為止；符合條件者可申請考不上全額退費 純筆記方案為自行安排進度的數位內容，不含上述陪跑與退費保障 "
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "筆記購買後，讀書計畫是如何安排的？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "購買陪跑方案後，學長會透過官方 LINE 與你聯繫，確認目標考期與每日可讀書時間 除了核心筆記內容，也會規劃題庫的使用時機與刷題最後衝刺策略，並以四次 meeting、刷題指引與弱點分析，陪伴你直到考取 "
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "如何購買與付款？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "請先透過官方 LINE 諮詢並確認方案，再以信用卡透過綠界科技（ECPay）完成付款 價格均以新台幣計價，所列金額為應付總金額；如依法應稅，已內含相關稅費 "
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "筆記如何交付？需要多久？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "本商品為數位內容，將以雲端連結寄送（例如 Google 雲端硬碟），付款確認後 24 小時內交付"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "所謂的退費機制具體規範是什麼？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "純筆記方案為數位內容，一經交付後，除法律另有規定或退換貨政策所列情形外，原則上不予退費 陪跑方案另有考不上全額退費保障：若你每天確實回報讀書進度，且考前 Self-Assessment（SA）兩次皆達 High，卻仍未通過正式考試，我們將提供全額退費 詳細條款見退費政策 "
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "陪跑如何進行，會陪到什麼時候？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "陪跑方案自開通起陪伴至考取為止，計畫不因特定週期結束而中斷 其中包含四次 meeting（線上進行，時間另行約定）、刷題指引、刷題弱點分析與藥物教學 請於確定應考日後盡速告知，以便安排 meeting 與衝刺計畫 "
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "筆記、知識點、圖卡與藥物整理各有多少？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "筆記共 101 篇，分為七大單元 知識點以較保守的方式標示為 6,000+ 則（詳細估計約 6,700 則） 另有《101 篇核心重點速讀》，每篇濃縮 1 個核心考點，與上述知識點是不同層次的整理 圖卡 101 張，與筆記一對一 藥物整理涵蓋高頻藥物、抗生素、GERD 用藥與胰島素作用時間圖，合計 80+ 種藥物，並附檢驗魚骨圖與 emia 單字速記卡 "
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "考試結果如何看待？考不上可以退費嗎？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "考試結果仍取決你的基礎、投入與臨場發揮，本網站不就通過考試作出無條件保證 惟購買陪跑方案者，如每天確實回報讀書進度，且考前 Self-Assessment（SA）兩次皆達 High，卻仍未通過正式考試，可依退費政策申請全額退費 純筆記方案不適用此項保障 "
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "考完拿到執照後，後續會有協助嗎？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "拿到執照只是開始 學長也會分享後續關於美國醫院應徵、履歷撰寫以及過渡期的心路歷程，讓你不只是考到執照，更能著手準備出國工作 "
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "內容可以分享給其他人嗎？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "筆記、圖卡與藥物整理僅授權購買者本人備考使用，請勿重製、轉售、公開傳輸或提供他人使用 詳見服務條款 "
+     }
+    }
+   ]
+  }
  ]
- },
- {
- "@type": "FAQPage",
- "@id": "https://shiftnotes.github.io/#faq",
- "mainEntity": [
- {
- "@type": "Question",
- "name": "英文基礎不好，真的能考過美國 RN 嗎？",
- "acceptedAnswer": {
- "@type": "Answer",
- "text": "這是最常被問到的問題 NCLEX 考試考的是護理邏輯與臨床安全觀念，並非文學造詣 筆記把複雜的英文拆解為醫護人員熟悉的學術詞彙與關鍵字，只要掌握這些對標詞彙，英文基礎較弱也能著手應考 "
- }
- },
- {
- "@type": "Question",
- "name": "這份筆記適合誰？",
- "acceptedAnswer": {
- "@type": "Answer",
- "text": "適合正在準備美國註冊護理師考試（NCLEX-RN）的考生 無論你正在規劃讀書進度，或已開始刷題、希望把內容整理得更清楚，都可以先透過官方 LINE 諮詢，確認是否符合你目前的程度與需求 "
- }
- },
- {
- "@type": "Question",
- "name": "純筆記與陪跑方案有何不同？",
- "acceptedAnswer": {
- "@type": "Answer",
- "text": "兩種方案都包含 101 篇中英對照筆記、101 張一對一圖卡、80+ 種藥物整理、檢驗速查，以及 101 個核心考點速讀 陪跑方案另外包含讀書計畫安排、四次 meeting、刷題指引、刷題弱點分析與藥物教學，並陪跑到考取為止；符合條件者可申請考不上全額退費 純筆記方案為自行安排進度的數位內容，不含上述陪跑與退費保障 "
- }
- },
- {
- "@type": "Question",
- "name": "筆記購買後，讀書計畫是如何安排的？",
- "acceptedAnswer": {
- "@type": "Answer",
- "text": "購買陪跑方案後，學長會透過官方 LINE 與你聯繫，確認目標考期與每日可讀書時間 除了核心筆記內容，也會規劃題庫的使用時機與刷題最後衝刺策略，並以四次 meeting、刷題指引與弱點分析，陪伴你直到考取 "
- }
- },
- {
- "@type": "Question",
- "name": "如何購買與付款？",
- "acceptedAnswer": {
- "@type": "Answer",
- "text": "請先透過官方 LINE 諮詢並確認方案，再以信用卡透過綠界科技（ECPay）完成付款 價格均以新台幣計價，所列金額為應付總金額；如依法應稅，已內含相關稅費 "
- }
- },
- {
- "@type": "Question",
- "name": "筆記如何交付？需要多久？",
- "acceptedAnswer": {
- "@type": "Answer",
- "text": "本商品為數位內容，將以雲端連結寄送（例如 Google 雲端硬碟），付款確認後 24 小時內交付"
- }
- },
- {
- "@type": "Question",
- "name": "所謂的退費機制具體規範是什麼？",
- "acceptedAnswer": {
- "@type": "Answer",
- "text": "純筆記方案為數位內容，一經交付後，除法律另有規定或退換貨政策所列情形外，原則上不予退費 陪跑方案另有考不上全額退費保障：若你每天確實回報讀書進度，且考前 Self-Assessment（SA）兩次皆達 High，卻仍未通過正式考試，我們將提供全額退費 詳細條款見退費政策 "
- }
- },
- {
- "@type": "Question",
- "name": "陪跑如何進行，會陪到什麼時候？",
- "acceptedAnswer": {
- "@type": "Answer",
- "text": "陪跑方案自開通起陪伴至考取為止，計畫不因特定週期結束而中斷 其中包含四次 meeting（線上進行，時間另行約定）、刷題指引、刷題弱點分析與藥物教學 請於確定應考日後盡速告知，以便安排 meeting 與衝刺計畫 "
- }
- },
- {
- "@type": "Question",
- "name": "筆記、知識點、圖卡與藥物整理各有多少？",
- "acceptedAnswer": {
- "@type": "Answer",
- "text": "筆記共 101 篇，分為七大單元 知識點以較保守的方式標示為 6,000+ 則（詳細估計約 6,700 則） 另有《101 篇核心重點速讀》，每篇濃縮 1 個核心考點，與上述知識點是不同層次的整理 圖卡 101 張，與筆記一對一 藥物整理涵蓋高頻藥物、抗生素、GERD 用藥與胰島素作用時間圖，合計 80+ 種藥物，並附檢驗魚骨圖與 emia 單字速記卡 "
- }
- },
- {
- "@type": "Question",
- "name": "考試結果如何看待？考不上可以退費嗎？",
- "acceptedAnswer": {
- "@type": "Answer",
- "text": "考試結果仍取決你的基礎、投入與臨場發揮，本網站不就通過考試作出無條件保證 惟購買陪跑方案者，如每天確實回報讀書進度，且考前 Self-Assessment（SA）兩次皆達 High，卻仍未通過正式考試，可依退費政策申請全額退費 純筆記方案不適用此項保障 "
- }
- },
- {
- "@type": "Question",
- "name": "考完拿到執照後，後續會有協助嗎？",
- "acceptedAnswer": {
- "@type": "Answer",
- "text": "拿到執照只是開始 學長也會分享後續關於美國醫院應徵、履歷撰寫以及過渡期的心路歷程，讓你不只是考到執照，更能著手準備出國工作 "
- }
- },
- {
- "@type": "Question",
- "name": "內容可以分享給其他人嗎？",
- "acceptedAnswer": {
- "@type": "Answer",
- "text": "筆記、圖卡與藥物整理僅授權購買者本人備考使用，請勿重製、轉售、公開傳輸或提供他人使用 詳見服務條款 "
- }
- }
- ]
- }
- ]
- }
- </script>
+}
+</script>
 </head>
 <body>
   <header class="site-header">
